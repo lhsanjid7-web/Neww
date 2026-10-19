@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fffafc">
+<meta name="description" content="Discover bags and accessories from Marina World.">
+<title>Marina World | Bags & Accessories</title>
+<style>
+:root{--bg:#fffafc;--surface:rgba(255,255,255,.76);--text:#28222a;--muted:#7b717d;--accent:#d94f91;--line:rgba(90,57,79,.13);--shadow:0 16px 45px rgba(94,56,82,.11);--green:#159447;--green2:#087638}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0%,#ffeaf4 0,transparent 34rem),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:background .25s,color .25s}
+body.dark{--bg:#141116;--surface:rgba(38,31,41,.82);--text:#f8eff7;--muted:#c2b4c3;--line:rgba(255,255,255,.12);--shadow:0 18px 50px rgba(0,0,0,.28);background:radial-gradient(circle at 15% 0%,#42253a 0,transparent 34rem),var(--bg)}
+button,input,select{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit}.wrap{width:min(1500px,100%);margin:auto;padding:24px clamp(14px,3vw,42px) 70px}
+.top-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}.brand-mark{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:800}.round-btn,.glass-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);box-shadow:inset 0 1px rgba(255,255,255,.7),0 8px 24px rgba(80,45,70,.08);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);cursor:pointer;transition:transform .2s,box-shadow .2s}.round-btn{width:46px;height:46px;border-radius:17px;font-size:20px}.round-btn:hover,.glass-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.hero{text-align:center;padding:12px 0 35px}.hero h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,86px);font-weight:500;letter-spacing:.04em;line-height:1.05;color:var(--accent)}.hero p{margin:14px auto 0;color:var(--muted);max-width:520px;font-size:15px;line-height:1.7}.hero .sparkle{color:#c58a3e}
+.toolbar{display:grid;grid-template-columns:minmax(180px,1.6fr) repeat(2,minmax(130px,.7fr));gap:10px;margin:0 0 20px}.field{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:13px 15px;border-radius:16px;outline:none;box-shadow:inset 0 1px rgba(255,255,255,.55);min-width:0}.field:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(217,79,145,.12)}
+.category-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.pill{border:1px solid var(--line);border-radius:999px;padding:9px 15px;background:var(--surface);color:var(--muted);cursor:pointer}.pill.active{background:var(--text);color:var(--bg);border-color:transparent}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:25px 0 14px}.section-head h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(25px,3vw,34px);margin:0}.count{color:var(--muted);font-size:13px}
+.product-grid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:15px}.product-card{position:relative;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:23px;padding:9px;background:var(--surface);box-shadow:inset 0 1px rgba(255,255,255,.88),var(--shadow);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:transform .22s,box-shadow .22s}.product-card:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(91,54,79,.16)}.photo-wrap{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(135deg,#f6edf2,#fff)}.product-photo{display:block;width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .4s}.product-card:hover .product-photo{transform:scale(1.035)}.badge-new{position:absolute;top:9px;left:9px;background:rgba(255,255,255,.88);color:#a82d68;padding:6px 8px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.04em;backdrop-filter:blur(10px)}.product-info{padding:11px 3px 3px}.product-name{font-size:13px;line-height:1.35;font-weight:750;margin:0 0 7px;min-height:34px}.meta{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:5px;margin-bottom:11px}.buy-btn{width:100%;border:1px solid rgba(255,255,255,.55);border-radius:13px;padding:10px 6px;background:linear-gradient(145deg,#28c76f,#07823d);color:white;font-weight:850;font-size:11px;letter-spacing:.06em;box-shadow:inset 0 1px rgba(255,255,255,.6),0 7px 16px rgba(9,135,62,.23);cursor:pointer;transition:transform .18s,filter .18s}.buy-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}.empty{padding:45px 16px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:22px;grid-column:1/-1}
+.skeleton{background:linear-gradient(100deg,#f0e8ee 20%,#fff 40%,#f0e8ee 60%);background-size:200% 100%;animation:shine 1.1s linear infinite;border-radius:16px;aspect-ratio:4/5}@keyframes shine{to{background-position:-200% 0}}
+.footer{text-align:center;padding:48px 12px 10px;color:var(--muted);font-size:13px}.footer strong{color:var(--accent)}.footer a{color:var(--accent);text-decoration:none}
+.menu-toggle{position:fixed;z-index:20;left:16px;top:50%;transform:translateY(-50%);width:54px;height:58px;border-radius:19px;border:1px solid rgba(255,255,255,.62);background:rgba(35,29,38,.78);color:#fff;box-shadow:inset 0 1px rgba(255,255,255,.35),0 14px 38px rgba(22,14,24,.25);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);font-size:24px;cursor:pointer}.drawer-scrim{position:fixed;inset:0;z-index:29;background:rgba(18,12,20,.4);opacity:0;pointer-events:none;transition:opacity .25s}.drawer{position:fixed;z-index:30;top:12px;bottom:12px;left:12px;width:min(320px,calc(100vw - 24px));border:1px solid var(--line);border-radius:27px;background:var(--surface);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);box-shadow:0 30px 90px rgba(0,0,0,.25);padding:23px;transform:translateX(calc(-100% - 25px));transition:transform .28s;display:flex;flex-direction:column;gap:10px}.drawer-open .drawer{transform:translateX(0)}.drawer-open .drawer-scrim{opacity:1;pointer-events:auto}.drawer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.drawer h3{font-family:Georgia,serif;font-size:25px;font-weight:500;margin:0;color:var(--accent)}.drawer-link{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:15px;padding:13px;text-align:left;cursor:pointer}.drawer-link:hover{border-color:var(--accent)}.drawer-note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:auto}
+.progress-top{position:fixed;right:17px;bottom:18px;z-index:15;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;color:var(--text)}.progress-top svg{position:absolute;inset:0;transform:rotate(-90deg)}.progress-top .arrow{font-size:21px;z-index:1}
+.toast-zone{position:fixed;z-index:60;right:16px;top:16px;display:grid;gap:9px;max-width:min(360px,calc(100vw - 32px))}.toast{background:#252029;color:white;padding:13px 16px;border-radius:15px;box-shadow:var(--shadow);font-size:13px;animation:toastin .2s ease-out}@keyframes toastin{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(16,10,17,.72);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-panel{width:min(850px,100%);max-height:92vh;overflow:auto;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:0 30px 90px rgba(0,0,0,.35)}.modal-close{float:right}.modal-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.7fr);gap:20px;align-items:center;clear:both;padding-top:10px}.modal-content img{width:100%;max-height:72vh;object-fit:contain;border-radius:17px}.modal-content h2{font-family:Georgia,serif;font-weight:500;font-size:30px}.modal-content p{color:var(--muted)}
+@media(max-width:1350px){.product-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:900px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.toolbar{grid-template-columns:1fr 1fr}.toolbar .search{grid-column:1/-1}}
+@media(max-width:560px){.wrap{padding:18px 12px 60px}.top-actions{margin-left:48px}.brand-mark{font-size:10px}.hero{padding-top:6px}.hero h1{font-size:42px}.hero p{font-size:13px}.toolbar{gap:8px}.field{padding:12px 11px;font-size:13px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-card{padding:7px;border-radius:18px}.product-name{font-size:12px;min-height:32px}.buy-btn{font-size:10px}.menu-toggle{left:9px;width:43px;height:49px;border-radius:15px;font-size:20px}.modal-content{grid-template-columns:1fr}.modal-content img{max-height:48vh}.modal-content h2{font-size:24px}.progress-top{width:46px;height:46px;right:10px;bottom:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="drawer-scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Main menu">
+  <div class="drawer-top"><h3>Marina World</h3><button class="round-btn" id="closeMenu" aria-label="Close menu">×</button></div>
+  <button class="drawer-link" data-scroll="top">✧ Home</button>
+  <button class="drawer-link" data-category="Bags">👜 Bags</button>
+  <button class="drawer-link" data-category="Accessories">🎀 Accessories</button>
+  <button class="drawer-link" data-scroll="products">⌕ Browse products</button>
+  <button class="drawer-link" id="drawerDark">☾ Switch dark mode</button>
+  <a class="drawer-link" href="https://www.facebook.com/share/1EfXRnGYsk/" target="_blank" rel="noopener">♡ Chat on Facebook</a>
+  <p class="drawer-note">Elegant bags and accessories, curated with love.<br>Use the search and filters to find your favourite.</p>
+</aside>
+<button class="menu-toggle" id="openMenu" aria-label="Open menu">☰</button>
+<div class="wrap" id="top">
+  <div class="top-actions"><div class="brand-mark">Marina’s Collection · Bags & Accessories</div><button class="round-btn" id="darkToggle" title="Switch theme" aria-label="Switch dark mode">☾</button></div>
+  <header class="hero">
+    <h1>MARINA WORLD</h1>
+    <p><span class="sparkle">✦</span> Little details. Lovely style. <span class="sparkle">✦</span><br>Explore our bags and accessories.</p>
+  </header>
+  <section id="products" aria-label="Product collection">
+    <div class="toolbar">
+      <input id="search" class="field search" type="search" placeholder="Search products…" aria-label="Search products">
+      <select id="colourFilter" class="field" aria-label="Filter by colour"><option value="">All colours</option></select>
+      <select id="priceFilter" class="field" aria-label="Filter by price"><option value="">All prices</option><option value="priced">Price listed</option><option value="unpriced">Message for price</option></select>
+    </div>
+    <div class="category-pills" id="categoryPills">
+      <button class="pill active" data-category="">All products</button>
+      <button class="pill" data-category="Bags">Bags</button>
+      <button class="pill" data-category="Accessories">Accessories</button>
+    </div>
+    <div class="section-head"><h2 id="sectionTitle">Our Collection</h2><span class="count" id="count"></span></div>
+    <div class="product-grid" id="productGrid" aria-live="polite"></div>
+  </section>
+  <footer class="footer"><p><strong>MARINA WORLD</strong></p><p>Made for your everyday style ✦</p><p><a href="https://www.facebook.com/share/1EfXRnGYsk/" target="_blank" rel="noopener">Contact us on Facebook</a></p></footer>
+</div>
+<button class="progress-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23" fill="none" stroke="currentColor" stroke-opacity=".12" stroke-width="2"/><circle id="progressRing" cx="26" cy="26" r="23" fill="none" stroke="#d94f91" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="144.5" stroke-dashoffset="144.5"/></svg><span class="arrow">↑</span></button>
+<div class="toast-zone" id="toastZone" aria-live="polite"></div>
+<div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Product preview"><div class="modal-panel"><button class="round-btn modal-close" id="closeModal" aria-label="Close preview">×</button><div class="modal-content"><img id="modalImage" alt=""><div><h2 id="modalName"></h2><p id="modalMeta"></p><p id="modalPrice"></p><button class="buy-btn" id="modalBuy">CHAT TO ORDER ↗</button><button class="glass-btn" id="shareBtn" style="margin-top:10px;width:100%;border-radius:13px;padding:11px">Share product ↗</button></div></div></div></div>
+<script src="products.js"></script>
+<script>
+(() => {
+ const CHAT_URL = "https://www.facebook.com/share/1EfXRnGYsk/";
+ const products = (window.MARINA_PRODUCTS || []).map(p => ({...p}));
+ const $ = id => document.getElementById(id);
+ let activeCategory = "", modalProduct = null;
+ const grid = $("productGrid");
+ function toast(message){const el=document.createElement("div");el.className="toast";el.textContent=message;$("toastZone").appendChild(el);setTimeout(()=>el.remove(),3200)}
+ function openChat(product){window.open(CHAT_URL,"_blank","noopener"); if(product) toast("Opening Facebook. Product: "+product.name)}
+ function shareProduct(product){
+   const url = location.href.split("#")[0] + "#product-" + product.id;
+   const text = product.name + " — Marina World";
+   if(navigator.share){navigator.share({title:product.name,text,url}).catch(()=>{});}
+   else if(navigator.clipboard && navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(()=>toast("Product link copied!")).catch(()=>toast("Copy the page link from your browser."));}
+   else toast("Use your browser's Share option to share this product.");
+ }
+ function showModal(p){modalProduct=p;$("modalImage").src=p.image;$("modalImage").alt=p.name;$("modalName").textContent=p.name;$("modalMeta").textContent=p.category+" · "+p.color;$("modalPrice").textContent=p.price ? p.price : "Message for price";$("imageModal").classList.add("open");$("modalBuy").onclick=()=>openChat(p);$("shareBtn").onclick=()=>shareProduct(p)}
+ function render(){
+   const query=$("search").value.trim().toLowerCase(), colour=$("colourFilter").value, price=$("priceFilter").value;
+   const filtered=products.filter(p=>(!activeCategory||p.category===activeCategory)&&(!query||(p.name+" "+p.category+" "+p.color).toLowerCase().includes(query))&&(!colour||p.color===colour)&&(!price||(price==="priced"?!!p.price:!p.price)));
+   $("count").textContent=filtered.length+" products";
+   $("sectionTitle").textContent=activeCategory||"Our Collection";
+   grid.innerHTML="";
+   if(!filtered.length){grid.innerHTML='<div class="empty">No products match your filters. Try another search.</div>';return}
+   filtered.forEach(p=>{
+     const card=document.createElement("article");card.className="product-card";
+     const photoWrap=document.createElement("div");photoWrap.className="photo-wrap";
+     const img=document.createElement("img");img.className="product-photo";img.loading="lazy";img.src=p.image;img.alt=p.name;img.addEventListener("click",()=>showModal(p));
+     img.onerror=()=>{img.alt=p.name+" photo unavailable";img.style.opacity=".25";};
+     photoWrap.appendChild(img);
+     if(p.newArrival){const badge=document.createElement("span");badge.className="badge-new";badge.textContent="NEW ARRIVAL";photoWrap.appendChild(badge)}
+     const info=document.createElement("div");info.className="product-info";
+     const title=document.createElement("h3");title.className="product-name";title.textContent=p.name;
+     const meta=document.createElement("div");meta.className="meta";const col=document.createElement("span");col.textContent=p.color;const priceEl=document.createElement("span");priceEl.textContent=p.price||"Ask price";meta.append(col,priceEl);
+     const buy=document.createElement("button");buy.className="buy-btn";buy.textContent="BUY / CHAT ↗";buy.addEventListener("click",()=>openChat(p));
+     info.append(title,meta,buy);card.append(photoWrap,info);grid.appendChild(card);
+   });
+ }
+ const colours=[...new Set(products.map(p=>p.color).filter(Boolean))].sort();
+ colours.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;$("colourFilter").appendChild(o)});
+ $("search").addEventListener("input",render);$("colourFilter").addEventListener("change",render);$("priceFilter").addEventListener("change",render);
+ document.querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.category;document.querySelectorAll(".pill").forEach(x=>x.classList.toggle("active",x===b));render()}));
+ function closeDrawer() {document.body.classList.remove("drawer-open")}
+ $("openMenu").onclick=()=>document.body.classList.add("drawer-open");$("closeMenu").onclick=closeDrawer;$("scrim").onclick=closeDrawer;
+ document.querySelectorAll(".drawer-link").forEach(b=>b.addEventListener("click",()=>{if(b.dataset.category!==undefined){activeCategory=b.dataset.category;document.querySelectorAll(".pill").forEach(x=>x.classList.toggle("active",x.dataset.category===activeCategory));render();$("products").scrollIntoView({behavior:"smooth"});}else if(b.dataset.scroll==="top"){window.scrollTo({top:0,behavior:"smooth"});}else if(b.dataset.scroll==="products"){$("products").scrollIntoView({behavior:"smooth"});} if(b.dataset.category!==undefined||b.dataset.scroll)closeDrawer()}));
+ function toggleDark(){document.body.classList.toggle("dark");const dark=document.body.classList.contains("dark");$("darkToggle").textContent=dark?"☀":"☾";$("drawerDark").textContent=dark?"☀ Switch light mode":"☾ Switch dark mode";try{localStorage.setItem("marina-dark",dark?"1":"0")}catch(e){}}
+ $("darkToggle").onclick=toggleDark;$("drawerDark").onclick=toggleDark;
+ try{if(localStorage.getItem("marina-dark")==="1"){document.body.classList.add("dark");$("darkToggle").textContent="☀";$("drawerDark").textContent="☀ Switch light mode"}}catch(e){}
+ $("closeModal").onclick=()=>$("imageModal").classList.remove("open");$("imageModal").addEventListener("click",e=>{if(e.target===$("imageModal"))$("imageModal").classList.remove("open")});document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeDrawer();$("imageModal").classList.remove("open")}});
+ $("toTop").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+ function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;const ratio=max>0?window.scrollY/max:0;$("progressRing").style.strokeDashoffset=String(144.5*(1-ratio));}
+ window.addEventListener("scroll",updateProgress,{passive:true});updateProgress();
+ if(location.hash.startsWith("#product-")){const id=Number(location.hash.slice(9));const p=products.find(x=>x.id===id);if(p)setTimeout(()=>showModal(p),200)}
+ render();
+})();
+</script>
+</body>
+</html>
